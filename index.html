@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da forca</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <h1>Jogo da Forca</h1>
 
     <div id="imgEtext">
         <img src="assets/images/forca.png" alt="imagemDaForca" width="350">
-        <div id="textEbutton">
-        <label for="chute">Digite a letra que deseja chutar</label>
-        <input type="text" id="chute" maxlength="1">
-        <button>Enviar</button>
+
+        <div id="palavraEbox">
+            <div id="textEbutton">
+                <label for="chute">Tente uma letra</label>
+                <input type="text" id="chute" maxlength="1">
+                <button>Enviar</button>
+            </div>
+            <p class="alerta l_N_Econtrada">Letra não encontrada</p>
+            <p id="Palavra">Top</p>
+        </div>
+        <div id="gameOver">
+            <h1>Game Over</h1>
+            <button>Reiniciar</button>
+        </div>
+        <div id="vitoria">
+            <h1>Vitória</h1>
+            <button>Reiniciar</button>
+        </div>
     </div>
+
     
-    </div>
-    <p id="Palavra">Top</p>
 </body>
+
 </html>
