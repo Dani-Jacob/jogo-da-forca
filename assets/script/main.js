@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         let valorInput = document.getElementById("chute").value;
         limparInput();
+        if(valorInput.toString().trim() == ""){
+            return 0;
+        }
+
         if(validarValorInput(valorInput)){
             realizarTentativa(valorInput.trim().toUpperCase())
         }else{
@@ -113,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     function marcarErro() {
-        console.log("vai marcar erro, tent atual: " + tentativas);
         tentativas++;
         verificarTentativas();
         verificarImagemForca();
@@ -122,6 +125,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     function verificarImagemForca(){
         let elementImg = document.getElementById("imgForca");
         switch(tentativas){
+            case 0:
+                elementImg.setAttribute("src","assets/images/forca.png");
+                break;
             case 1:
                 elementImg.setAttribute("src","assets/images/forca+cabeca.png");
                 break;
@@ -177,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         palavraUsuario = new Array(palavraSorteada.length).fill("");
         refreshPalavraUsuario(palavraUsuario);
         atualizarLetrasEscolhidasTela();
-        console.log(`Palavra sorteada: ${palavraSorteada.toString()}`)
+        //console.log(`Palavra sorteada: ${palavraSorteada.toString()}`)
+        verificarImagemForca();
     }
 });
