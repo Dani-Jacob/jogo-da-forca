@@ -12,28 +12,31 @@
     <h1>Jogo da Forca</h1>
 
     <div id="imgEtext">
-        <img src="assets/images/forca.png" alt="imagemDaForca" width="350">
+        <img id="imgForca" src="assets/images/forca.png" alt="imagemDaForca" width="350">
 
         <div id="palavraEbox">
             <div id="textEbutton">
                 <label for="chute">Tente uma letra</label>
                 <input type="text" id="chute" maxlength="1">
-                <button>Enviar</button>
+                <button id="botaoEnviar">Enviar</button>
             </div>
-            <p class="alerta l_N_Econtrada">Letra não encontrada</p>
-            <p id="Palavra">Top</p>
+            <p class="alerta" id="l_n_encontrada">Letra não encontrada</p>
+            <p class="alerta" id="letraRepetida">Essa letra já foi, tente outra</p>
+            <p id="Palavra"></p>
+            <br>
+            <p id="letrasEnviadas"></p>
         </div>
         <div id="gameOver">
             <h1>Game Over</h1>
-            <button>Reiniciar</button>
+            <button class="botaoReiniciar">Reiniciar</button>
         </div>
         <div id="vitoria">
             <h1>Vitória</h1>
-            <button>Reiniciar</button>
+            <button class="botaoReiniciar">Reiniciar</button>
         </div>
     </div>
 
-    
+    <script src="assets/script/main.js"></script>   
 </body>
 
 </html>
